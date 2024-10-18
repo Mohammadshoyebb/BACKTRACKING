@@ -1,4 +1,5 @@
 public class NQueenProblenm {
+    public static int count = 0;
     public static void main(String[] args) {
         // Create a 4x4 chess board
         char board[][] = new char[4][4];
@@ -12,6 +13,8 @@ public class NQueenProblenm {
         
         // Start the process of placing queens, beginning with the first row (row 0)
         assigningQueen(board, 0);
+
+        System.out.println("Number of Ways: "+count);
     }
 
     // Recursive method to place queens on the chess board
@@ -21,6 +24,9 @@ public class NQueenProblenm {
         // Base case: If we have processed all rows, print the board configuration
         if(row == 4) {
             printQueen(arr); // Print the board when all rows are processed
+
+            count++;
+            
             return; // Return to backtrack
         }
         

@@ -1,4 +1,5 @@
 public class N_Queen_All_Rows {
+  
     public static void main(String[] args) {
         // Create a 2x2 chess board
         char board[][] = new char[2][2];
@@ -12,6 +13,7 @@ public class N_Queen_All_Rows {
         
         // Start the process of placing queens, beginning with the first row (row 0)
         assigningQueen(board, 0);
+        
     }
 
     // Recursive method to place queens on the chess board
@@ -21,6 +23,9 @@ public class N_Queen_All_Rows {
         // Base case: If we have processed all rows, print the board configuration
         if(row == 2) {
             printQueen(arr); // Print the board when all rows are processed
+
+           
+
             return; // Return to backtrack
         }
         
